@@ -15,4 +15,9 @@ def nest(degree, coefficients, x, base_points=None):
 
 ans = nest(4,[-1,5,-3,3,2],1/2,[0,0,0,0])
 print(ans)
-
+x=1.00001
+ans2 = nest(50,np.ones(51),x)
+print(ans2)
+ans22 = (x**51-1)/(x-1)
+print(ans22)
+print('error = %g' % (ans22-ans2))
